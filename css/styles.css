@@ -1,0 +1,136 @@
+/* || Colors and font stuff */
+:root {
+  /* || Primary */
+  --paleBlue: hsl(225, 100%, 94%);
+  --briBlue: hsl(245, 75%, 52%);
+
+  /* || Neutral Colors */
+  --vPaleBlue: hsl(225, 100%, 98%);
+  --desBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+
+  /* || Font */
+  --principleFont: "Red Hat Display", sans-serif;
+  --sizeFont: 1.6rem;
+}
+
+/* Box-sizing and rem size*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px -> 1rem */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* || Global */
+body{
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--paleBlue);
+    font-family: var(--principleFont);
+}   
+
+h1{
+    font-size: var(--sizeFont);
+    font-weight: 900;
+}
+
+
+
+/* || Class */
+.container{
+    max-width: 30rem;
+    height: 45rem;
+    background-color: var(--vPaleBlue);
+    margin: 4rem auto 0 auto;
+    border-radius: 1rem;
+}
+
+.image-container img{
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+}
+
+.principle-text{
+    margin: 3rem 0;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.principle-text p{
+    color: var(--desBlue);
+    font-size: 1.2rem;
+}
+
+.container-music{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--paleBlue);
+}
+
+.container-music h3,
+.container-music p{
+    text-align: left;
+    margin: 0;
+}
+
+.btn{
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.payment{
+    margin-top: 3rem;
+    background-color: var(--briBlue);
+}
+
+.pay{
+    text-decoration: none;
+    color: var(--vPaleBlue);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.cancel{
+    text-decoration: none;
+    color: var(--desBlue);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.footer {
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* || Media queries */
+@media (min-width: 768px) {
+    body{
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+
+    .container{
+        margin: 10rem auto 0 auto;
+
+    }
+}
